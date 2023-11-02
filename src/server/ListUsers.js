@@ -1,8 +1,11 @@
-const ListUsers = ({Users}) => {
+import { useState } from "react";
 
-    const showData = () => {
-        //Cambiar los 'li' para que tengan informacion
-        <p>Hola wenas</p>
+const ListUsers = ({Users}) => {
+    const [selectUser, setSelectUser] = useState(null)
+
+    const showData = (user) => {
+        console.log(user.id)
+        setSelectUser(user)
     }
 
     return (
@@ -12,13 +15,10 @@ const ListUsers = ({Users}) => {
                     <li key={user.id}>
                         <span>{user.userName} </span>
                         <button onClick={() => {
-                            showData()
+                            showData(user)
                         }}>Mostrar datos</button>
                     </li>
                 ))}
-                <li id="nombre"></li>
-                <li id="telefono"></li>
-                <li id="mail"></li>
             </ul>
         </div>
     )
