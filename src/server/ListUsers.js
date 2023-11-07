@@ -4,6 +4,8 @@ const ListUsers = ({Users}) => {
     const [selectUser, setSelectUser] = useState(null)
     const [loadedPosts, setLoadedPosts] = useState([]);
 
+    
+
     const DEFAULT_URL = "http://localhost:5000/users/" + selectUser;
 
     async function fetchPosts() {
@@ -44,6 +46,16 @@ const ListUsers = ({Users}) => {
                     //MOSTRAR LOS DATOS DE selectedUser debajo del </ul>
                 ))}
             </ul>
+           {selectUser && 
+           <div>
+                <h2>Informacion de usuario:</h2>
+                <span>{loadedPosts.name}</span>
+                <br/>
+                <span>{loadedPosts.email}</span>
+                <br/>
+                <span>{loadedPosts.phone}</span>
+           </div>
+           }  
         </div>
     )
 }
