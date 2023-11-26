@@ -11,9 +11,6 @@ async function fetchPosts() {
 
 function Users() {
     const [loadedPosts, setLoadedPosts] = useState([]);
-//   function fetchPostsHandler() {
-//     fetchPosts().then((fetchedPosts) => setLoadedPosts(fetchedPosts));
-//   }
 
   useEffect(function () {
     fetchPosts().then((fetchedPosts) => setLoadedPosts(fetchedPosts));

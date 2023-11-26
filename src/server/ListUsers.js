@@ -33,17 +33,16 @@ const ListUsers = ({Users}) => {
                             setSelectUser(user.id)
                         }}>Mostrar datos</button>
                     </li>
-                    //MOSTRAR LOS DATOS DE selectedUser debajo del </ul>
                 ))}
             </ul>
            {selectUser && 
            <div>
                 <h2>Informacion de usuario:</h2>
-                <span>{loadedPosts.name}</span>
+                <span>Nombre: {loadedPosts.name}</span>
                 <br/>
-                <span>{loadedPosts.email}</span>
+                <span>Email: {loadedPosts.email}</span>
                 <br/>
-                <span>{loadedPosts.phone}</span>
+                <span>Teléfono: {loadedPosts.phone}</span>
            </div>
            }  
         </div>
